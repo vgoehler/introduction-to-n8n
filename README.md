@@ -4,7 +4,7 @@ author: Volker G. Göhler
 
 email:  volker.goehler@informatik.tu-freiberg.de
 
-version: 0.0.1
+version: 0.0.2
 
 language: de
 
@@ -19,7 +19,7 @@ attribute:
 
 comment: Distributed Software
 
-link: ./styles.css
+link: https://raw.githubusercontent.com/vgoehler/introduction-to-n8n/refs/heads/main/styles.css
 
 title: Introduction to N8N Workflows
 
@@ -38,7 +38,7 @@ Volker Göhler, TU Bergakademie Freiberg
 
 ------------------------------
 
-![Welcome](https://n8n.io/brandguidelines/logo-dark.svg "n8n Logo [n8n.io](https://n8n.io/)")<!-- height=100%" -->
+![Welcome](https://n8n.io/brandguidelines/logo-dark.svg "n8n Logo [n8n.io](https://n8n.io/)")<!-- height="100%" -->
 
 > "Code" auf https://github.com/vgoehler/introduction-to-n8n als Open Educational Ressource.
 
@@ -46,21 +46,39 @@ Volker Göhler, TU Bergakademie Freiberg
 
 ## Motivation: Warum Automatisierung?
 
+<section class="flex-container border">
+<div class="flex-child">
+
 - Wiederkehrende digitale Aufgaben sind allgegenwärtig
 - APIs, Datenpipelines, Benachrichtigungen, Reports
 - Manuelle Prozesse sind:
+
   - fehleranfällig
   - zeitaufwendig
   - schwer skalierbar
 
-**Zentrale Frage:**  
-> Müssen wir wirklich *alles* selbst programmieren?
+
+</div>
+<div class="flex-child" style="margin-top:100px;">
+
+![](https://upload.wikimedia.org/wikipedia/commons/9/98/Terdeghem.-_Cog_wheels_of_Steenmeulen_%283%29.jpg "Pierre André Leclercq, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons")<!-- height="50%" -->
+
+</div>
+</section>
+
+### Fragen?
+
+> **Zentrale Fragen:**  
+>
+> - Was können wir automatisieren, und wie?
+> - Müssen wir wirklich *alles* selbst programmieren?
 
 ---
 
-## Automatisierung in der Praxis
+### Automatisierung in der Praxis
 
 Beispiele aus Hochschule und Industrie:
+
 - Automatisches Sammeln von Umfrageergebnissen
 - Synchronisation von Tools (GitHub, LMS, Cloud-Speicher)
 - Monitoring von Services oder Experimenten
@@ -68,7 +86,7 @@ Beispiele aus Hochschule und Industrie:
 
 ---
 
-## Wo ordnet sich n8n ein?
+### Wo ordnet sich n8n ein?
 
 | Ansatz | Eigenschaften |
 |------|---------------|
@@ -124,6 +142,7 @@ n8n wird *nicht* zeilenweise wie ein Skript ausgeführt.
 ## Die n8n-Oberfläche
 
 Zentrale Elemente:
+
 - Workflow-Canvas
 - Node-Konfigurationsbereich
 - Ausführungshistorie
@@ -137,12 +156,14 @@ Zentrale Elemente:
 ## Geführter Workflow: Überblick
 
 Wir bauen gemeinsam einen einfachen Workflow:
+
 1. Manueller Trigger
 2. Strukturierte Daten setzen
 3. Daten transformieren
 4. Ausgabe inspizieren
 
 Ziel:
+
 - Verkettung von Nodes verstehen
 - Datenfluss nachvollziehen
 
@@ -151,10 +172,12 @@ Ziel:
 ## Geführter Workflow: Schritt 1
 
 **Manueller Trigger**
+
 - Startet den Workflow manuell
 - Keine Eingabedaten erforderlich
 
 Warum?
+
 - Ideal zum Testen
 - Deterministisches Verhalten
 
@@ -163,14 +186,17 @@ Warum?
 ## Geführter Workflow: Schritt 2
 
 **Set-Node**
+
 - Definiert strukturierte JSON-Daten
 
 Beispiel-Felder:
+
 - `name`
 - `kurs`
 - `zeitstempel`
 
 Zweck:
+
 - Vorhersehbare Eingaben erzeugen
 - Datenstruktur kennenlernen
 
@@ -179,10 +205,12 @@ Zweck:
 ## Geführter Workflow: Schritt 3
 
 **Function-Node**
+
 - JavaScript-basierte Datenverarbeitung
 - Zugriff auf Eingaben über `$json`
 
 Beispiele:
+
 - Texte verändern
 - Berechnete Werte hinzufügen
 - Ausgabe umstrukturieren
@@ -208,6 +236,7 @@ Fügen Sie Ihren Namen und die aktuelle Uhrzeit zur Ausgabe hinzu.
 ### Aufgabe: Webhook-basierter Workflow
 
 Szenario:
+
 - Empfang externer JSON-Daten
 - Validierung des Inhalts
 - Weiterleitung oder Ablehnung der Anfrage
@@ -250,6 +279,7 @@ Diese Fehler sind in n8n *sichtbar*.
 ## Debugging in n8n
 
 Werkzeuge:
+
 - Wiederholung von Executions
 - Vergleich von Ein- und Ausgabe
 - Pinned Data
@@ -263,12 +293,14 @@ Werkzeuge:
 ## Fortgeschrittene Demo: APIs & KI
 
 Beispiele:
+
 - API-basierte Datenanreicherung
 - Textklassifikation
 - Zusammenfassungen
 - Bedingtes Routing basierend auf KI-Ausgaben
 
 Fokus:
+
 - Konzept, nicht vollständige Implementierung
 
 ---
@@ -276,6 +308,7 @@ Fokus:
 ## Kritische Perspektive
 
 Automatisierung ist nicht immer die beste Lösung:
+
 - Versteckte Komplexität
 - Wartungsaufwand
 - Datenschutz & Privatsphäre
@@ -290,6 +323,7 @@ Wo sollten Menschen „im Loop“ bleiben?
 ## Reflexion
 
 Diskussion:
+
 - Wo würde n8n Ihnen *jetzt* helfen?
 - Wo wäre es problematisch?
 - Wie verändert Low-Code Softwareentwicklung?
@@ -299,6 +333,7 @@ Diskussion:
 ## Ausblick
 
 Mögliche nächste Themen:
+
 - Versionskontrolle für Workflows
 - Deployment & Skalierung
 - Secrets & Credentials
