@@ -23,6 +23,8 @@ link: ./styles.css
 
 title: Introduction to N8N Workflows
 
+import:   https://raw.githubusercontent.com/liaScript/mermaid_template/master/README.md
+
 tags: Lehre, TUBAF
 
 -->
@@ -42,130 +44,285 @@ Volker Göhler, TU Bergakademie Freiberg
 
 ----------------------------------------
 
+## Motivation: Warum Automatisierung?
 
-# Course Outline: Hands-on Workflow Automation with n8n
+- Wiederkehrende digitale Aufgaben sind allgegenwärtig
+- APIs, Datenpipelines, Benachrichtigungen, Reports
+- Manuelle Prozesse sind:
+  - fehleranfällig
+  - zeitaufwendig
+  - schwer skalierbar
 
-## Course Information
-- **Course type:** Practical lecture / lab
-- **Duration:** 90 minutes (1.5 hours)
-- **Format:** Hands-on with guided exercises
-- **Target audience:** University students with basic programming knowledge
-- **Prerequisites:** Basic understanding of JSON and HTTP
-
----
-
-## Learning Objectives
-By the end of this session, students will be able to:
-- Explain the purpose and core concepts of workflow automation
-- Describe the main components of n8n (workflows, nodes, triggers, executions)
-- Build and debug simple automation workflows
-- Implement a webhook-driven workflow with conditional logic
-- Critically reflect on the benefits and limits of low-code automation tools
+**Zentrale Frage:**  
+> Müssen wir wirklich *alles* selbst programmieren?
 
 ---
 
-## Schedule & Content
+## Automatisierung in der Praxis
 
-### 0–10 min — Motivation and Context
-- What is workflow automation?
-- Typical automation scenarios in academia and industry
-- Positioning n8n among other tools (scripts, Zapier, Make)
-- Short discussion: “Which task would you automate?”
-
----
-
-### 10–20 min — Core Concepts of n8n
-- Workflows as directed data-flow graphs
-- Trigger nodes vs. regular nodes
-- Data model: JSON in / JSON out
-- Executions, logs, and debugging
-- Tour of the n8n editor interface
+Beispiele aus Hochschule und Industrie:
+- Automatisches Sammeln von Umfrageergebnissen
+- Synchronisation von Tools (GitHub, LMS, Cloud-Speicher)
+- Monitoring von Services oder Experimenten
+- Anbindung von KI-Diensten ohne eigenes Backend
 
 ---
 
-### 20–35 min — Guided First Workflow
-- Creating a new workflow
-- Manual Trigger node
-- Set node: defining structured data
-- Function node: basic data transformation
-- Running and inspecting an execution
-- Mini exercise: add name and timestamp to the output
+## Wo ordnet sich n8n ein?
+
+| Ansatz | Eigenschaften |
+|------|---------------|
+| Skripte | Flexibel, aber wartungsintensiv |
+| Eigenes Backend | Mächtig, aber hoher Aufwand |
+| No-/Low-Code-Tools | Schnell, visuell, zugänglich |
+| **n8n** | Self-hosted, erweiterbar, entwicklernah |
 
 ---
 
-### 35–55 min — Student Hands-on Exercise
-**Task:** Build a webhook-based workflow
-- Webhook Trigger: receiving JSON data
-- IF node: validating incoming data
-- Set or Function node: preparing output
-- HTTP Request node: forwarding accepted data
-- Handling rejected requests
-- Testing the workflow with sample payloads
+## Was ist n8n?
+
+- Open-Source-Tool zur **Workflow-Automatisierung**
+- Visueller Editor für **Datenfluss-Pipelines**
+- Node-basiertes Ausführungsmodell
+- Cloud- oder Self-Hosting möglich
+
+**Mentales Modell:**  
+> n8n = ausführbares Flussdiagramm
 
 ---
 
-### 55–65 min — Debugging and Discussion
-- Common beginner mistakes
-- Reading execution data
-- Using pinned data for testing
-- Group discussion of encountered issues
+## Zentrale Konzepte
+
+- **Workflow**: Verbundene Nodes als Pipeline
+- **Trigger-Nodes**: Starten den Workflow
+  - Manuell
+  - Webhook
+  - Cron
+- **Normale Nodes**: Verarbeiten oder leiten Daten weiter
+- **Execution**: Ein einzelner Durchlauf eines Workflows
 
 ---
 
-### 65–80 min — Advanced Example and Outlook
-- Demonstration: API-based data enrichment
-- Example: AI-powered text classification or summarization
-- Conditional routing based on AI output
-- Discussion: costs, privacy, reproducibility, ethics
+## Datenmodell
+
+- Alle Daten werden als **JSON** weitergegeben
+- Jeder Node:
+  - erhält Eingabedaten
+  - erzeugt Ausgabedaten
+
+```mermaid @mermaid
+graph LR
+    NodeA["Node A"] -->|📄 JSON| NodeB["Node B"]
+    NodeB -->|📄 JSON| NodeC["Node C"]
+```
+
+**Wichtig:**  
+n8n wird *nicht* zeilenweise wie ein Skript ausgeführt.
 
 ---
 
-### 80–90 min — Reflection and Wrap-up
-- When is automation not the right solution?
-- Strengths and limitations of low-code tools
-- Use cases in study projects and theses
-- Outlook to further topics (deployment, security, scaling)
+## Die n8n-Oberfläche
+
+Zentrale Elemente:
+- Workflow-Canvas
+- Node-Konfigurationsbereich
+- Ausführungshistorie
+- Ein- und Ausgabe-Inspektor
+
+**Faustregel:**  
+> Immer zuerst die Daten anschauen.
 
 ---
 
-## Optional Follow-up Assignment
-- Identify a real-world task suitable for automation
-- Design and implement a simple n8n workflow
-- Document the workflow logic and reflection in a short report
+## Geführter Workflow: Überblick
+
+Wir bauen gemeinsam einen einfachen Workflow:
+1. Manueller Trigger
+2. Strukturierte Daten setzen
+3. Daten transformieren
+4. Ausgabe inspizieren
+
+Ziel:
+- Verkettung von Nodes verstehen
+- Datenfluss nachvollziehen
 
 ---
 
-## Required Preparation
+## Geführter Workflow: Schritt 1
 
-### Software
-- n8n (cloud account or local Docker installation)
-- Modern web browser
+**Manueller Trigger**
+- Startet den Workflow manuell
+- Keine Eingabedaten erforderlich
 
-### Prior Knowledge
-- Basic programming concepts
-- JSON data structures
-- HTTP request/response basics
-
----
-
-## Teaching Notes
-- Emphasize data flow over line-by-line execution
-- Encourage experimentation and failure during exercises
-- Focus on conceptual understanding rather than tool-specific details
+Warum?
+- Ideal zum Testen
+- Deterministisches Verhalten
 
 ---
 
+## Geführter Workflow: Schritt 2
 
-## Subgoal Overview and Teaching Plan
+**Set-Node**
+- Definiert strukturierte JSON-Daten
 
-| Subgoal | Taught Subject Matter | Learning Goal | Start (min) | End (min) | Material Needed (Teacher) |
-|--------|-----------------------|---------------|-------------|-----------|----------------------------|
-| 1. Motivation & Context | Workflow automation concepts; examples from academia and industry; positioning of n8n | Students understand *why* automation is relevant and can name suitable application scenarios | 0 | 10 | Slides with motivation examples; short real-world use cases; discussion prompt |
-| 2. Core Concepts of n8n | Workflows, nodes, triggers, data flow (JSON), executions, debugging | Students can explain the basic mental model of n8n and its core components | 10 | 20 | Slides with diagrams; live n8n instance; example workflow for demonstration |
-| 3. First Guided Workflow | Manual Trigger, Set node, Function node, execution inspection | Students can create and run a simple workflow and inspect its data flow | 20 | 35 | Prepared demo workflow; step-by-step checklist; working n8n environment |
-| 4. Independent Hands-on Exercise | Webhook Trigger, IF node, HTTP Request node, validation logic | Students can independently build a webhook-based workflow with conditional logic | 35 | 55 | Exercise sheet; sample JSON payloads; mock API endpoint (e.g., httpbin); fallback solution |
-| 5. Debugging & Error Handling | Execution logs, common errors, pinned data, debugging strategies | Students can diagnose and fix typical workflow errors | 55 | 65 | Intentionally broken workflows; debugging examples; checklist of common mistakes |
-| 6. Advanced Use & Outlook | API integration, AI/LLM-based nodes, conditional routing, ethical aspects | Students gain awareness of advanced use cases and limitations of automation tools | 65 | 80 | Demo workflow (AI or API-based); slides on ethics, privacy, and costs |
-| 7. Reflection & Wrap-up | Critical reflection, transfer to own context, outlook | Students can critically assess when and how n8n should be used | 80 | 90 | Reflection questions; summary slide; optional assignment description |
+Beispiel-Felder:
+- `name`
+- `kurs`
+- `zeitstempel`
 
+Zweck:
+- Vorhersehbare Eingaben erzeugen
+- Datenstruktur kennenlernen
 
+---
+
+## Geführter Workflow: Schritt 3
+
+**Function-Node**
+- JavaScript-basierte Datenverarbeitung
+- Zugriff auf Eingaben über `$json`
+
+Beispiele:
+- Texte verändern
+- Berechnete Werte hinzufügen
+- Ausgabe umstrukturieren
+
+---
+
+## Ausführung analysieren
+
+- Workflow starten
+- Nodes anklicken
+- Prüfen:
+  - Eingabedaten
+  - Ausgabedaten
+- Vorher-/Nachher-Vergleich
+
+**Mini-Aufgabe:**  
+Fügen Sie Ihren Namen und die aktuelle Uhrzeit zur Ausgabe hinzu.
+
+---
+
+## Hands-on-Übung
+
+### Aufgabe: Webhook-basierter Workflow
+
+Szenario:
+- Empfang externer JSON-Daten
+- Validierung des Inhalts
+- Weiterleitung oder Ablehnung der Anfrage
+
+---
+
+## Erforderliche Workflow-Logik
+
+1. **Webhook-Trigger**
+2. **IF-Node**
+   - Bedingung auf JSON-Feld
+3. **Akzeptierter Pfad**
+   - Weiterleitung per HTTP
+4. **Abgelehnter Pfad**
+   - Rückgabe einer Fehlermeldung
+
+---
+
+## Lernziele der Übung
+
+- Selbstständiges Arbeiten mit n8n
+- Einsatz von bedingter Logik
+- Debugging fehlerhafter Workflows
+- Verständnis realer Automatisierungsmuster
+
+---
+
+## Typische Probleme (und warum sie auftreten)
+
+- Falscher JSON-Pfad
+- Nodes nicht verbunden
+- Fehler in Expressions
+- Annahmen über Datenstruktur
+
+**Gute Nachricht:**  
+Diese Fehler sind in n8n *sichtbar*.
+
+---
+
+## Debugging in n8n
+
+Werkzeuge:
+- Wiederholung von Executions
+- Vergleich von Ein- und Ausgabe
+- Pinned Data
+- Inkrementelles Testen
+
+**Debugging-Mindset:**  
+> Den Daten folgen, nicht den Nodes.
+
+---
+
+## Fortgeschrittene Demo: APIs & KI
+
+Beispiele:
+- API-basierte Datenanreicherung
+- Textklassifikation
+- Zusammenfassungen
+- Bedingtes Routing basierend auf KI-Ausgaben
+
+Fokus:
+- Konzept, nicht vollständige Implementierung
+
+---
+
+## Kritische Perspektive
+
+Automatisierung ist nicht immer die beste Lösung:
+- Versteckte Komplexität
+- Wartungsaufwand
+- Datenschutz & Privatsphäre
+- Reproduzierbarkeit
+- Risiko der Überautomatisierung
+
+**Diskussionsfrage:**  
+Wo sollten Menschen „im Loop“ bleiben?
+
+---
+
+## Reflexion
+
+Diskussion:
+- Wo würde n8n Ihnen *jetzt* helfen?
+- Wo wäre es problematisch?
+- Wie verändert Low-Code Softwareentwicklung?
+
+---
+
+## Ausblick
+
+Mögliche nächste Themen:
+- Versionskontrolle für Workflows
+- Deployment & Skalierung
+- Secrets & Credentials
+- Automatisierung als Backend-Ersatz
+- Mensch–KI-Kollaboration
+
+---
+
+## Optionale Aufgabe
+
+- Identifizieren Sie eine reale Aufgabe zur Automatisierung
+- Implementieren Sie einen funktionierenden n8n-Workflow
+- Dokumentieren Sie:
+  - Ziel
+  - Workflow-Logik
+  - Reflexion zu Grenzen
+
+---
+
+## Zentrale Erkenntnisse
+
+- n8n ermöglicht schnelle, transparente Automatisierung
+- Datenflussdenken ist zentral
+- Low-Code ≠ kein Denken
+- Automatisierung ist immer eine Designentscheidung
+
+**Vielen Dank!**
