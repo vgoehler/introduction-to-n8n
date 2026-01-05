@@ -1,4 +1,3 @@
-
 ## Course Information
 - **Course type:** Practical lecture / lab
 - **Duration:** 90 minutes (1.5 hours)
@@ -41,15 +40,19 @@ By the end of this session, students will be able to:
 
 ## Subgoal Overview and Teaching Plan
 
-| Subgoal | Taught Subject Matter | Learning Goal | Start (min) | End (min) | Material Needed (Teacher) |
-|--------|-----------------------|---------------|-------------|-----------|----------------------------|
-| 1. Motivation & Context | Workflow automation concepts; examples from academia and industry; positioning of n8n | Students understand *why* automation is relevant and can name suitable application scenarios | 0 | 10 | Slides with motivation examples; short real-world use cases; discussion prompt |
-| 2. Core Concepts of n8n | Workflows, nodes, triggers, data flow (JSON), executions, debugging | Students can explain the basic mental model of n8n and its core components | 10 | 20 | Slides with diagrams; live n8n instance; example workflow for demonstration |
-| 3. First Guided Workflow | Manual Trigger, Set node, Function node, execution inspection | Students can create and run a simple workflow and inspect its data flow | 20 | 35 | Prepared demo workflow; step-by-step checklist; working n8n environment |
-| 4. Independent Hands-on Exercise | Webhook Trigger, IF node, HTTP Request node, validation logic | Students can independently build a webhook-based workflow with conditional logic | 35 | 55 | Exercise sheet; sample JSON payloads; mock API endpoint (e.g., httpbin); fallback solution |
-| 5. Debugging & Error Handling | Execution logs, common errors, pinned data, debugging strategies | Students can diagnose and fix typical workflow errors | 55 | 65 | Intentionally broken workflows; debugging examples; checklist of common mistakes |
-| 6. Advanced Use & Outlook | API integration, AI/LLM-based nodes, conditional routing, ethical aspects | Students gain awareness of advanced use cases and limitations of automation tools | 65 | 80 | Demo workflow (AI or API-based); slides on ethics, privacy, and costs |
-| 7. Reflection & Wrap-up | Critical reflection, transfer to own context, outlook | Students can critically assess when and how n8n should be used | 80 | 90 | Reflection questions; summary slide; optional assignment description |
+| Subgoal | Learning Goal | Start (min) | End (min) | Material Needed (Teacher) |
+|--------|---------------|-------------|-----------|----------------------------|
+| 1. Motivation & Context | Students understand *why* automation is relevant and can name suitable application scenarios | 0 | 10 | Slides with motivation examples; short real-world use cases; discussion prompt |
+| 1.1 Dimensions of Automatisation | Students can classify different levels of automation from simple scripts to complex systems | 10 | 15 | Slides for task; get Systems; prepare radar plots |
+| 2. Core Concepts of n8n | Students can explain the basic mental model of n8n and its core components | 15 | 25 | Slides with diagrams; live n8n instance; example workflow for demonstration |
+| 2.1. Install n8n | Students can set up n8n in a cloud or local environment | 25 | 40 | Installation guide; troubleshooting tips |
+| 2.2. Demo of n8n Workflow | Students can navigate the n8n interface and understand workflow structure | 40 | 50 | Live n8n instance; prepared demo workflow |
+| 3. First Guided Workflow | Students can create and run a simple workflow and inspect its data flow | 50 | 70 | Prepared demo workflow; step-by-step checklist; working n8n environment |
+
+| 4. Independent Hands-on Exercise | Students can independently build a webhook-based workflow with conditional logic | 35 | 55 | Exercise sheet; sample JSON payloads; mock API endpoint (e.g., httpbin); fallback solution |
+| 5. Debugging & Error Handling | Students can diagnose and fix typical workflow errors | 55 | 65 | Intentionally broken workflows; debugging examples; checklist of common mistakes |
+| 6. Advanced Use & Outlook | Students gain awareness of advanced use cases and limitations of automation tools | 65 | 80 | Demo workflow (AI or API-based); slides on ethics, privacy, and costs |
+| 7. Reflection & Wrap-up | Students can critically assess when and how n8n should be used | 80 | 90 | Reflection questions; summary slide; optional assignment description |
 
 
 ## Schedule & Content
@@ -122,4 +125,3 @@ By the end of this session, students will be able to:
 - Design and implement a simple n8n workflow
 - Document the workflow logic and reflection in a short report
 
----

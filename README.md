@@ -8,7 +8,7 @@ version: 0.0.2
 
 language: de
 
-narrator:Deutsch Male
+narrator: Deutsch Male
 
 edit: true
 date: 2026
@@ -19,11 +19,11 @@ attribute:
 
 comment: Distributed Software
 
+import: https://raw.githubusercontent.com/liaScript/mermaid_template/master/README.md
+
 link: https://raw.githubusercontent.com/vgoehler/introduction-to-n8n/refs/heads/main/styles.css
 
 title: Introduction to N8N Workflows
-
-import:   https://raw.githubusercontent.com/liaScript/mermaid_template/master/README.md
 
 tags: Lehre, TUBAF
 
@@ -38,7 +38,7 @@ Volker Göhler, TU Bergakademie Freiberg
 
 ------------------------------
 
-![Welcome](https://n8n.io/brandguidelines/logo-dark.svg "n8n Logo [n8n.io](https://n8n.io/)")<!-- height="100%" -->
+![Welcome](https://n8n.io/brandguidelines/logo-dark.svg "n8n Logo [n8n.io](https://n8n.io/)")<!-- style="width:500px;" -->
 
 > "Code" auf https://github.com/vgoehler/introduction-to-n8n als Open Educational Ressource.
 
@@ -61,7 +61,7 @@ Volker Göhler, TU Bergakademie Freiberg
 </div>
 <div class="flex-child" style="margin-top:100px;">
 
-![](https://upload.wikimedia.org/wikipedia/commons/9/98/Terdeghem.-_Cog_wheels_of_Steenmeulen_%283%29.jpg "Pierre André Leclercq, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons")<!-- height="50%" -->
+![Cogs](https://upload.wikimedia.org/wikipedia/commons/9/98/Terdeghem.-_Cog_wheels_of_Steenmeulen_%283%29.jpg "Pierre André Leclercq, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons")<!-- style="width:400px;" -->
 
 </div>
 </section>
@@ -72,8 +72,6 @@ Volker Göhler, TU Bergakademie Freiberg
 >
 > - Was können wir automatisieren, und wie?
 > - Müssen wir wirklich *alles* selbst programmieren?
-
----
 
 ### Automatisierung in der Praxis
 
@@ -86,16 +84,18 @@ Beispiele aus Hochschule und Industrie:
 
 ---
 
+        {{1}}
+
+**Welche groben Kategorien von Automatisierungsebenen gibt es?**
+=====
+
+        {{2}}
+**Füllen Sie das Radar Diagram aus!**
+=====
+
 ### Wo ordnet sich n8n ein?
 
-| Ansatz | Eigenschaften |
-|------|---------------|
-| Skripte | Flexibel, aber wartungsintensiv |
-| Eigenes Backend | Mächtig, aber hoher Aufwand |
-| No-/Low-Code-Tools | Schnell, visuell, zugänglich |
-| **n8n** | Self-hosted, erweiterbar, entwicklernah |
-
----
+![n8n Kategorisierung](img/radar_w_data.svg "n8n Kategorisierung")<!-- style="width:600px;" -->
 
 ## Was ist n8n?
 
@@ -103,13 +103,14 @@ Beispiele aus Hochschule und Industrie:
 - Visueller Editor für **Datenfluss-Pipelines**
 - Node-basiertes Ausführungsmodell
 - Cloud- oder Self-Hosting möglich
+- [n8n.io](n8n.io)
 
-**Mentales Modell:**  
-> n8n = ausführbares Flussdiagramm
+> **Mentales Modell:**  
+>
+> n8n $=$ ausführbares Flussdiagramm
 
----
 
-## Zentrale Konzepte
+### Zentrale Konzepte
 
 - **Workflow**: Verbundene Nodes als Pipeline
 - **Trigger-Nodes**: Starten den Workflow
@@ -119,12 +120,12 @@ Beispiele aus Hochschule und Industrie:
 - **Normale Nodes**: Verarbeiten oder leiten Daten weiter
 - **Execution**: Ein einzelner Durchlauf eines Workflows
 
----
-
-## Datenmodell
+Datenmodell
+===========
 
 - Alle Daten werden als **JSON** weitergegeben
 - Jeder Node:
+
   - erhält Eingabedaten
   - erzeugt Ausgabedaten
 
@@ -137,7 +138,26 @@ graph LR
 **Wichtig:**  
 n8n wird *nicht* zeilenweise wie ein Skript ausgeführt.
 
----
+### n8n
+
+- Cloud und Self-hosting
+- Download: 
+
+    - [npm](https://docs.n8n.io/hosting/installation/npm/)
+
+        - `npm install n8n -g` 
+        - `n8n start` oder `n8n` 
+
+    - [docker](https://docs.n8n.io/hosting/installation/docker/)
+    
+    <details>
+    <summary>📄 docker-compose.yaml</summary>
+
+    <!-- DOCKER_COMPOSE_YAML_START -->
+    ```yaml
+
+    ```
+    <!-- DOCKER_COMPOSE_YAML_END --></details>
 
 ## Die n8n-Oberfläche
 
@@ -150,8 +170,6 @@ Zentrale Elemente:
 
 **Faustregel:**  
 > Immer zuerst die Daten anschauen.
-
----
 
 ## Geführter Workflow: Überblick
 
@@ -166,8 +184,6 @@ Ziel:
 
 - Verkettung von Nodes verstehen
 - Datenfluss nachvollziehen
-
----
 
 ## Geführter Workflow: Schritt 1
 
