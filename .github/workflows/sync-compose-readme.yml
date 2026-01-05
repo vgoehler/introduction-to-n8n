@@ -1,0 +1,65 @@
+name: Sync docker-compose.yaml into README
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - "docker-compose.yaml"
+      - "README.md"
+      - ".github/scripts/sync_compose_to_readme.py"
+      - ".github/workflows/sync-compose-readme.yml"
+  pull_request:
+    paths:
+      - "docker-compose.yaml"
+      - "README.md"
+      - ".github/scripts/sync_compose_to_readme.py"
+      - ".github/workflows/sync-compose-readme.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Sync README block with docker-compose.yaml
+        run: python .github/scripts/sync_compose_to_readme.py
+
+      - name: Show diff (if any)
+        run: git diff -- README.md || true
+
+      # In PRs: fail if README would change (enforces sync)
+      - name: Fail PR if README is out of sync
+        if: github.event_name == 'pull_request'
+        run: |
+          if ! git diff --quiet -- README.md; then
+            echo "README.md is out of sync with docker-compose.yaml."
+            echo "Run the sync (or let CI update it on main) and commit the result."
+            exit 1
+          fi
+
+      # On push to main: auto-commit & push the README update if needed
+      - name: Commit & push changes (main only)
+        if: github.event_name == 'push'
+        run: |
+          if git diff --quiet -- README.md; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "docs: sync docker-compose.yaml into README"
+          git push
