@@ -154,10 +154,25 @@ n8n wird *nicht* zeilenweise wie ein Skript ausgeführt.
     <summary>📄 docker-compose.yaml</summary>
 
     <!-- DOCKER_COMPOSE_YAML_START -->
-    ```yaml
 
-    ```
-    <!-- DOCKER_COMPOSE_YAML_END --></details>
+```yaml docker_compose.yaml
+services:
+  n8n:
+    image: docker.n8n.io/n8nio/n8n
+    container_name: n8n
+    ports:
+      - "5678:5678"
+    volumes:
+      - n8n_data:/home/node/.n8n
+    environment:
+      - N8N_RUNNERS_ENABLED=true
+    restart: unless-stopped
+
+volumes:
+  n8n_data:
+```
+
+<!-- DOCKER_COMPOSE_YAML_END --></details>
 
 ## Die n8n-Oberfläche
 
