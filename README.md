@@ -4,7 +4,7 @@ author: Volker G. Göhler
 
 email:  volker.goehler@informatik.tu-freiberg.de
 
-version: 0.0.2
+version: 0.0.3
 
 language: de
 
@@ -360,8 +360,16 @@ Diese Fehler sind in n8n *sichtbar*.
 ### Szenario
 
 - Dem Webhook-Workflow wird eine JSON-Nutzlast gesendet.
-- Diese enthält eine Kartenfarbe (DIAMONDS, HEARTS, SPADES, CLUBS), eine Anzahl an Karten und eine Ziel-URL.
-- Der Workflow holt sich Anzahl an Karten von der Karten-API und sendet die Karten urls in png an die Ziel-URL zurück, wenn die Farbe stimmt.
+- Diese enthält eine Kartenfarbe (DIAMONDS, HEARTS, SPADES, CLUBS) und eine Anzahl an Spielkarten. Beispielsweise:
+
+```json
+{
+  "color": "HEARTS",
+  "count": 5
+}
+```
+
+- Der Workflow holt sich eine entsprechende **Anzahl** an Spielkarten von der Karten-API und sendet die URLs der Bilder der Karten in png zurück, wenn die **Farbe** stimmt.
 - `https://deckofcardsapi.com/api/deck/new/draw/?count=5`
 - Andernfalls wird eine Fehlermeldung zurückgegeben.
 
