@@ -48,11 +48,7 @@ By the end of this session, students will be able to:
 | 2.1. Install n8n | Students can set up n8n in a cloud or local environment | 25 | 40 | Installation guide; troubleshooting tips |
 | 2.2. Demo of n8n Workflow | Students can navigate the n8n interface and understand workflow structure | 40 | 50 | Live n8n instance; prepared demo workflow |
 | 3. First Guided Workflow | Students can create and run a simple workflow and inspect its data flow | 50 | 70 | Prepared demo workflow; step-by-step checklist; working n8n environment |
-
-| 4. Independent Hands-on Exercise | Students can independently build a webhook-based workflow with conditional logic | 35 | 55 | Exercise sheet; sample JSON payloads; mock API endpoint (e.g., httpbin); fallback solution |
-| 5. Debugging & Error Handling | Students can diagnose and fix typical workflow errors | 55 | 65 | Intentionally broken workflows; debugging examples; checklist of common mistakes |
-| 6. Advanced Use & Outlook | Students gain awareness of advanced use cases and limitations of automation tools | 65 | 80 | Demo workflow (AI or API-based); slides on ethics, privacy, and costs |
-| 7. Reflection & Wrap-up | Students can critically assess when and how n8n should be used | 80 | 90 | Reflection questions; summary slide; optional assignment description |
+| 4. Independent Hands-on Exercise | Students can independently build a webhook-based workflow with conditional logic | 70 | 90 | Exercise sheet; sample JSON payloads; mock API endpoint (e.g., httpbin); fallback solution |
 
 
 ## Schedule & Content

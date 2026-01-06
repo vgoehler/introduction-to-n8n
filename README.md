@@ -59,7 +59,7 @@ Volker Göhler, TU Bergakademie Freiberg
 
 
 </div>
-<div class="flex-child" style="margin-top:100px;">
+<div class="flex-child" style="margin-top:10px;">
 
 ![Cogs](https://upload.wikimedia.org/wikipedia/commons/9/98/Terdeghem.-_Cog_wheels_of_Steenmeulen_%283%29.jpg "Pierre André Leclercq, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons")<!-- style="width:400px;" -->
 
@@ -87,11 +87,9 @@ Beispiele aus Hochschule und Industrie:
         {{1}}
 
 **Welche groben Kategorien von Automatisierungsebenen gibt es?**
-=====
 
         {{2}}
 **Füllen Sie das Radar Diagram aus!**
-=====
 
 ### Wo ordnet sich n8n ein?
 
@@ -121,7 +119,7 @@ Beispiele aus Hochschule und Industrie:
 - **Execution**: Ein einzelner Durchlauf eines Workflows
 
 Datenmodell
-===========
+-------------------
 
 - Alle Daten werden als **JSON** weitergegeben
 - Jeder Node:
@@ -138,22 +136,28 @@ graph LR
 **Wichtig:**  
 n8n wird *nicht* zeilenweise wie ein Skript ausgeführt.
 
-### n8n
+### n8n Installation
 
-- Cloud und Self-hosting
-- Download: 
+Cloud und Self-hosting
 
-    - [npm](https://docs.n8n.io/hosting/installation/npm/)
+** Install [npm](https://docs.n8n.io/hosting/installation/npm/)**
 
-        - `npm install n8n -g` 
-        - `n8n start` oder `n8n` 
+```shell bash
+    npm install n8n -g
+    n8n start 
 
-    - [docker](https://docs.n8n.io/hosting/installation/docker/)
+    oder
+
+    n8n
+```
+
+**Install [docker](https://docs.n8n.io/hosting/installation/docker/)**
+
+- download docker compose file
+- ins Verzeichnis wechseln
+- `docker compose up -d`
     
-    <details>
-    <summary>📄 docker-compose.yaml</summary>
-
-    <!-- DOCKER_COMPOSE_YAML_START -->
+<!-- DOCKER_COMPOSE_YAML_START -->
 
 ```yaml docker_compose.yaml
 services:
@@ -172,9 +176,11 @@ volumes:
   n8n_data:
 ```
 
-<!-- DOCKER_COMPOSE_YAML_END --></details>
+<!-- DOCKER_COMPOSE_YAML_END -->
 
-## Die n8n-Oberfläche
+### Die n8n-Oberfläche
+
+`localhost:5678` im Browser öffnen
 
 Zentrale Elemente:
 
@@ -186,7 +192,11 @@ Zentrale Elemente:
 **Faustregel:**  
 > Immer zuerst die Daten anschauen.
 
-## Geführter Workflow: Überblick
+![n8n Workflow](img/n8n-workflow.png "n8n Weekly Shodan incident report")<!-- style="width:600px;" -->
+
+## Geführter Workflow
+
+### Überblick
 
 Wir bauen gemeinsam einen einfachen Workflow:
 
@@ -195,17 +205,17 @@ Wir bauen gemeinsam einen einfachen Workflow:
 3. Daten transformieren
 4. Ausgabe inspizieren
 
-Ziel:
+*Ziel*:
 
 - Verkettung von Nodes verstehen
 - Datenfluss nachvollziehen
 
-## Geführter Workflow: Schritt 1
+### Nodes
 
-**Manueller Trigger**
-
-- Startet den Workflow manuell
-- Keine Eingabedaten erforderlich
+> **Manueller Trigger**
+> 
+> - Startet den Workflow manuell
+> - Keine Eingabedaten erforderlich
 
 Warum?
 
@@ -214,11 +224,9 @@ Warum?
 
 ---
 
-## Geführter Workflow: Schritt 2
-
-**Set-Node**
-
-- Definiert strukturierte JSON-Daten
+> **EditFields / Set-Node**
+>
+> - Definiert strukturierte JSON-Daten
 
 Beispiel-Felder:
 
@@ -233,12 +241,10 @@ Zweck:
 
 ---
 
-## Geführter Workflow: Schritt 3
-
-**Function-Node**
-
-- JavaScript-basierte Datenverarbeitung
-- Zugriff auf Eingaben über `$json`
+> **Code-Node**
+> 
+> - JavaScript-basierte Datenverarbeitung
+> - Zugriff auf Eingaben über `$json`
 
 Beispiele:
 
@@ -246,68 +252,28 @@ Beispiele:
 - Berechnete Werte hinzufügen
 - Ausgabe umstrukturieren
 
----
+### Arbeitsschritte
 
-## Ausführung analysieren
+**Schritte:**
 
 - Workflow starten
 - Nodes anklicken
 - Prüfen:
+
   - Eingabedaten
   - Ausgabedaten
+
 - Vorher-/Nachher-Vergleich
 
 **Mini-Aufgabe:**  
-Fügen Sie Ihren Namen und die aktuelle Uhrzeit zur Ausgabe hinzu.
 
----
-
-## Hands-on-Übung
-
-### Aufgabe: Webhook-basierter Workflow
-
-Szenario:
-
-- Empfang externer JSON-Daten
-- Validierung des Inhalts
-- Weiterleitung oder Ablehnung der Anfrage
-
----
-
-## Erforderliche Workflow-Logik
-
-1. **Webhook-Trigger**
-2. **IF-Node**
-   - Bedingung auf JSON-Feld
-3. **Akzeptierter Pfad**
-   - Weiterleitung per HTTP
-4. **Abgelehnter Pfad**
-   - Rückgabe einer Fehlermeldung
-
----
-
-## Lernziele der Übung
-
-- Selbstständiges Arbeiten mit n8n
-- Einsatz von bedingter Logik
-- Debugging fehlerhafter Workflows
-- Verständnis realer Automatisierungsmuster
-
----
-
-## Typische Probleme (und warum sie auftreten)
-
-- Falscher JSON-Pfad
-- Nodes nicht verbunden
-- Fehler in Expressions
-- Annahmen über Datenstruktur
-
-**Gute Nachricht:**  
-Diese Fehler sind in n8n *sichtbar*.
-
----
+- Fügen Sie Ihren **Namen** und die **aktuelle Uhrzeit** zur Ausgabe hinzu.
+- binden Sie Forms ein und nutzen Sie diese zur Eingabe von Name und Kurs.
 
 ## Debugging in n8n
+
+<section class="flex-container border">
+<div class="flex-child">
 
 Werkzeuge:
 
@@ -319,76 +285,95 @@ Werkzeuge:
 **Debugging-Mindset:**  
 > Den Daten folgen, nicht den Nodes.
 
----
+</div>
+<div class="flex-child" style="margin-top:10px;">
 
-## Fortgeschrittene Demo: APIs & KI
+![Matrix](https://upload.wikimedia.org/wikipedia/commons/4/44/Matrix_Morocco.jpg "Matrix.BO, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons")<!-- style="width:400px;" -->
 
-Beispiele:
-
-- API-basierte Datenanreicherung
-- Textklassifikation
-- Zusammenfassungen
-- Bedingtes Routing basierend auf KI-Ausgaben
-
-Fokus:
-
-- Konzept, nicht vollständige Implementierung
+</div>
+</section>
 
 ---
 
-## Kritische Perspektive
+https://deckofcardsapi.com/api/deck/new/draw/?count=5
 
-Automatisierung ist nicht immer die beste Lösung:
+## Hands-on-Übung
 
-- Versteckte Komplexität
-- Wartungsaufwand
-- Datenschutz & Privatsphäre
-- Reproduzierbarkeit
-- Risiko der Überautomatisierung
+**Aufgabe: Webhook-basierter Workflow**
 
-**Diskussionsfrage:**  
-Wo sollten Menschen „im Loop“ bleiben?
+Szenario:
 
----
+- Zwei Workflows
+- Aktivierung des Webhooks in einem Workflow
+- Anderer Workflow holt Daten ab, verarbeitet sie und sendet Antwort
 
-## Reflexion
+```mermaid @mermaid
+flowchart TD
+    subgraph Workflow_A["Auslöser-Workflow"]
+        A[Manueller Trigger] --> B[HTTP Request Node: Daten abrufen]
+    end
 
-Diskussion:
+    subgraph Workflow_B["Verarbeitungs-Workflow"]
+        C[Webhook Trigger] --> D[IF-Node: Bedingung?]
+        D -- Ja --> E[holt JSON-Feld ab und sendet per HTTP weiter]
+        D -- Nein --> F[Fehlermeldung zurückgeben]
+    end
 
-- Wo würde n8n Ihnen *jetzt* helfen?
-- Wo wäre es problematisch?
-- Wie verändert Low-Code Softwareentwicklung?
+    A -- HTTP Request --> C
+    E -- HTTP Response --> B
+    F -- HTTP Response --> B
+```
 
----
+### Erforderliche Workflow-Logik
 
-## Ausblick
+1. **Webhook-Trigger**
+2. **IF-Node**
+   - Bedingung auf JSON-Feld
+3. **Akzeptierter Pfad**
+   - Weiterleitung per HTTP
+4. **Abgelehnter Pfad**
+   - Rückgabe einer Fehlermeldung
 
-Mögliche nächste Themen:
+### Lernziele der Übung
 
-- Versionskontrolle für Workflows
-- Deployment & Skalierung
-- Secrets & Credentials
-- Automatisierung als Backend-Ersatz
-- Mensch–KI-Kollaboration
+- Selbstständiges Arbeiten mit n8n
+- Einsatz von bedingter Logik
+- Debugging fehlerhafter Workflows
+- Verständnis realer Automatisierungsmuster
 
----
+### Typische Probleme (und warum sie auftreten)
 
-## Optionale Aufgabe
+- Falscher JSON-Pfad
+- Nodes nicht verbunden
+- Fehler in Expressions
+- Annahmen über Datenstruktur
 
-- Identifizieren Sie eine reale Aufgabe zur Automatisierung
-- Implementieren Sie einen funktionierenden n8n-Workflow
-- Dokumentieren Sie:
-  - Ziel
-  - Workflow-Logik
-  - Reflexion zu Grenzen
+**Gute Nachricht:**  
+Diese Fehler sind in n8n *sichtbar*.
 
----
+**Tipp:**
 
-## Zentrale Erkenntnisse
+- HTTP-Request-Node verwenden
+- Split-Out und Filter verwenden
+- Use `Always Return Data` on Settings Page !
 
-- n8n ermöglicht schnelle, transparente Automatisierung
-- Datenflussdenken ist zentral
-- Low-Code ≠ kein Denken
-- Automatisierung ist immer eine Designentscheidung
+### Szenario
 
-**Vielen Dank!**
+- Dem Webhook-Workflow wird eine JSON-Nutzlast gesendet.
+- Diese enthält eine Kartenfarbe (DIAMONDS, HEARTS, SPADES, CLUBS), eine Anzahl an Karten und eine Ziel-URL.
+- Der Workflow holt sich Anzahl an Karten von der Karten-API und sendet die Karten urls in png an die Ziel-URL zurück, wenn die Farbe stimmt.
+- `https://deckofcardsapi.com/api/deck/new/draw/?count=5`
+- Andernfalls wird eine Fehlermeldung zurückgegeben.
+
+## Zusammenfassung
+
+- n8n ist ein mächtiges Tool zur Automatisierung
+- Visuelle Workflows erleichtern das Verständnis
+- Debugging ist datengetrieben
+
+<!-- style="font-size:huge;" -->
+> Vielen Dank für Ihre Aufmerksamkeit!
+>
+> ![Thank you](https://upload.wikimedia.org/wikipedia/commons/2/25/Thank-you-word-cloud.jpg "Ashashyou, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons")<!-- style="width:400px;" -->
+
+
