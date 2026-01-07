@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-README = Path("README.md")
+README = Path("lesson_01.md")
 COMPOSE = Path("docker-compose.yaml")
 
 START = "<!-- DOCKER_COMPOSE_YAML_START -->"
