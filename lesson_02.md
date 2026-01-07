@@ -115,7 +115,7 @@ Viele Nodes bieten:
 
 - **Continue On Fail**
 
-Effekt:
+**Effekt:**
 
 - Workflow läuft weiter
 - Fehler wird als **Datenobjekt** weitergegeben
@@ -132,16 +132,17 @@ Effekt:
 
 **Fehler sind Daten**
 
-Best Practice:
+> **Best Practice:**
+> 
 > Fehler nicht „werfen“, sondern **modellieren**
 
-Beispiel:
+**Beispiel:**
 
 - IF-Node prüft Ergebnis
 - expliziter Error-Pfad
 - strukturierte Rückgabe über Webhook
 
-Ziel:
+**Ziel:**
 
 - Workflow bleibt kontrollierbar
 - Aufrufer kann reagieren
@@ -210,12 +211,13 @@ Beispielprüfung:
 
 **Beispiel: Validierung mit IF-Node**
 
-Bedingungen:
+**Bedingungen:**
+
 - `limit` existiert
 - `limit > 0`
 - `limit <= 100`
 
-Wenn nicht erfüllt:
+*Wenn nicht erfüllt:*
 
 - Fehlerantwort
 - Statuscode 400
@@ -247,6 +249,9 @@ Realisierung:
 
 im JSON `status` und `data` Felder verwenden.
 
+
+    {{1}}
+<section>
 **Erfolgsantwort**
 
 Beispiel:
@@ -266,7 +271,10 @@ Beispiel:
 - konsistente Struktur
 - maschinenlesbar
 - leicht weiterzuverarbeiten
+</section>
 
+    {{2}}
+<section>
 **Fehlerantwort**
 
 ```json
@@ -286,7 +294,10 @@ Beispiel:
 In Kombination mit HTTP Status 400 / 404 / 500
 
 ??[Error Codes Wikipedia](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#4xx_client_error)
+</section>
 
+    {{3}}
+<section>
 **Leere Antwort**
 
 HTTP Status: 204 No Content
@@ -301,6 +312,7 @@ HTTP Status: 204 No Content
 >    - „nichts zu tun“
 >
 > ⚠️ Nicht geeignet, wenn der Aufrufer Daten erwartet.
+</section>
 
 ### Typische Fehlerquellen bei Webhook-Rückgaben
 
@@ -352,6 +364,15 @@ graph LR
 
 
 # Web APIs, Credentials
+
+Volker Göhler, TU Bergakademie Freiberg
+
+------------------------------
+
+![Welcome](https://n8n.io/brandguidelines/logo-dark.svg "n8n Logo [n8n.io](https://n8n.io/)")<!-- style="width:500px;" -->
+
+> "Code" auf https://github.com/vgoehler/introduction-to-n8n als Open Educational Ressource.
+
 
 ## Motivation: Warum Web APIs?
 
@@ -443,43 +464,35 @@ Vorteile:
   - Rate Limits
   - Kostenkontrolle
 
-➡️ Ideal, um **Credentials** zu erklären.
-
-??[REST API](https://developers.deepl.com/api-reference/document)
-
----
-
-### Ein Beispiel: Die DeepL API
-
-DeepL stellt eine Web API bereit für:
+**DeepL stellt eine Web API bereit für:**
 
 - Übersetzungen
 - Sprachdetektion
 - Textverarbeitung
 
-Technisch:
+**Technisch:**
 
-- HTTP-basierte REST API
+- REST API
 - JSON als Ein- und Ausgabe
 - Authentifizierung per API Key
 
 #### Credentials: API Keys bei DeepL
 
-Plan:
+**Plan:**
 
 Free Plan bis zu 500.000 Zeichen/Monat kostenlos
 
-Für die Nutzung erforderlich:
+*Für die Nutzung erforderlich:*
 
 - Registrierung bei DeepL (Benötigt Kreditkarte!)
 - Erzeugung eines **API Keys**
 
-Wichtig:
+*Wichtig:*
 
 - API Key identifiziert **Sie** gegenüber dem Dienst
 - Nutzung ist limitiert (Zeichen, Anfragen)
 
-??[DeepL API](https://www.deepl.com/en/pro/change-plan#developer)
+[DeepL API Plans](https://www.deepl.com/en/pro/change-plan#developer)
 
 
 #### Die DeepL Node in n8n
@@ -499,6 +512,7 @@ Die DeepL Node kapselt:
 
 ➡️ Weniger Fehler als manuelle HTTP Requests.
 
+> Contract Black Box
 
 
 ---
