@@ -23,12 +23,12 @@ import: https://raw.githubusercontent.com/liaScript/mermaid_template/master/READ
 
 link: https://raw.githubusercontent.com/vgoehler/introduction-to-n8n/refs/heads/main/styles.css
 
-title: Introduction to N8N Workflows
+title: Introduction to N8N Workflows 01
 
 tags: Lehre, TUBAF
 
 -->
-[![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/vgoehler/introduction-to-n8n/refs/heads/main/README.md)
+[![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/vgoehler/introduction-to-n8n/refs/heads/main/lesson_01.md)
 
 # Introduction to N8N Workflows
 
