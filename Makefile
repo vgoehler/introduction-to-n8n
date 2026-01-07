@@ -35,8 +35,8 @@ planing_%.pdf: planing_%.md
 	pandoc -t pdf "$<" -o "$@"
 
 copy-dist: $(LIA_PDFS) $(PLAN_PDFS)
-	@if [[ -d "$(WEBDAV_DIR)" ]]; then \
-		echo "WebDAV-Ziel gefunden: $(WEBDAV_DIR)"; \
+	@if mountpoint -q "$(WEBDAV_DIR)" && ls "$(WEBDAV_DIR)" >/dev/null 2>&1; then \
+		echo "WebDAV-Mount aktiv: $(WEBDAV_DIR) -> kopiere PDFs"; \
 		cp -f $(LIA_PDFS) $(PLAN_PDFS) "$(WEBDAV_DIR)/"; \
 	else \
 		echo "Kein WebDAV-Ziel unter '$(WEBDAV_DIR)' (nicht gemountet?) -> überspringe Kopie."; \
