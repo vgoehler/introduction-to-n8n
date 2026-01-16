@@ -28,7 +28,7 @@ title: Introduction to N8N Workflows 02
 tags: Lehre, TUBAF
 
 -->
-[![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/vgoehler/introduction-to-n8n/refs/heads/main/lesson_02.md)
+[![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/vgoehler/introduction-to-n8n/refs/heads/main/lesson_03.md)
 
 # Einführung in n8n Workflows: Persistenz, Zustände & verlässliche Workflows
 
