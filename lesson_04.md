@@ -93,8 +93,8 @@ Bevor wir zu weiteren Workflows kommen:
 - Bauen Sie den Formular-Workflow
 - Bauen Sie den Webhook-Workflow
 
-<div class="colorbox" style="background-color:#F0FDF4; width:50%; border:1px solid #059669;">
-<div style="background-color:#059669;">
+<div class="colorbox colorbox--batch" style="width:50%;">
+<div class="colorbox__title">
 **Spalten**
 </div>
 
@@ -106,8 +106,8 @@ Bevor wir zu weiteren Workflows kommen:
 - email
 </div>
 
-<div class="colorbox" style="background-color:#ECFDF5; width:50%; border:1px solid #10B981;">
-<div style="background-color:#10B981;">
+<div class="colorbox colorbox--errorwf" style="width:50%;">
+<div class="colorbox__title">
 **Nodes**
 </div>
 
@@ -135,7 +135,7 @@ Ein Scheduler:
 
 Das ist:
 
-<!--style="background-color:#ECFDF5; width:50%;"-->
+<!--class="lia-callout lia-callout--note"-->
 > - klassische Datenverarbeitung
 > - Logging, Reporting, Backups etc.
 
@@ -153,8 +153,8 @@ Falls das fehlschlägt:
 
 - Upload per FTP
 
-<div class="colorbox" style="background-color:#F0F7FF;">
-<div style="background-color:#4A90E2;">
+<div class="colorbox colorbox--but" >
+<div class="colorbox__title">
 *Test FTP Server:*
 </div>
 - https://dlptest.com/ftp-test/
@@ -198,7 +198,7 @@ Dieser:
 
 **Fehler sind:**
 
-<!--style="background-color:#ECFDF5; width:50%; font-weight: bolder;"-->
+<!--class="lia-callout lia-callout--note"-->
 >
 > Teil des Systems, nicht das Ende davon.
 
@@ -212,8 +212,8 @@ Dieser:
 - Erstellen Sie einen täglichen Batch Job
 - Erstellen Sie einen Error Workflow
 
-<div class="colorbox" style="background-color:#F0FDF4; width:50%; border:1px solid #059669;">
-<div style="background-color:#059669;">
+<div class="colorbox colorbox--batch" style="width:50%;">
+<div class="colorbox__title">
 **Batch Job**
 </div>
 - soll alle Namen und Email aus der Data Table lesen
@@ -221,8 +221,8 @@ Dieser:
 - diese auf dem FTP Server ablegen
 </div>
 
-<div class="colorbox" style="background-color:#ECFDF5; width:50%; border:1px solid #10B981;">
-<div style="background-color:#10B981;">
+<div class="colorbox colorbox--errorwf" style="width:50%;">
+<div class="colorbox__title">
 **Error Workflow**
 </div>
 - soll Fehler des Batch Jobs loggen
@@ -246,7 +246,7 @@ Gleiche Logik nicht kopieren, sondern:
 
 auslagern als:
 
-<!--style="background-color:#ECFDF5; width:50%;"-->
+<!--class="lia-callout lia-callout--note"-->
 >
 > wiederverwendbare Subworkflows.
 
@@ -268,7 +268,7 @@ Jeder Subworkflow braucht:
 
 Erstellen eines Subworkflows:
 
-<!--style="background-color:#ECFDF5; width:50%;"-->
+<!--class="lia-callout lia-callout--note"-->
 > - mehrere Nodes mit STRG + Klick auswählen, dann Rechtsklick → Create Subworkflow
 > - Bei Änderung der Inputs des Subworkflows muss Published werden
 
@@ -358,8 +358,8 @@ Ziel:
 
 ### Rick and Morty API – Überblick
 
-<div class="colorbox" style="background-color:#ECFDF5; width:50%; border:1px solid #10B981;">
-<div style="background-color:#10B981;">
+<div class="colorbox colorbox--errorwf" style="width:50%;">
+<div class="colorbox__title">
 Beispiel API:
 </div>
 [Rick and Morty API](https://rickandmortyapi.com/documentation)
