@@ -609,8 +609,8 @@ Der Workflow soll:
 
 - Set, IF, Function Nodes nach Bedarf
 
-<div class="colorbox" style="background-color:#E8D71A;">
-<div style="background-color:#E8891A;">
+<div class="colorbox colorbox--steps">
+<div class="colorbox__title">
 **Jeder Schritt soll:**
 </div>
 
@@ -619,8 +619,8 @@ Der Workflow soll:
 - nachvollziehbar sein
 </div>
 
-<div class="colorbox" style="background-color:#1AC2E8;">
-<div style="background-color:#3A92EA;">
+<div class="colorbox colorbox--hints">
+<div class="colorbox__title">
 **Hinweise zur Umsetzung:**
 </div>
 

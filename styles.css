@@ -52,10 +52,13 @@
     padding: 5px;
     border-radius: 5px;
     margin-bottom: 10px;
+    color: var(--color-text);
 }
-.colorbox div:first-child {
-    padding: 5px 0 0 5px;
-    border-radius: inherit;
+.colorbox__title {
+    padding: 0.35rem 0.6rem;
+    border-radius: 8px;
+    margin-bottom: 0.6rem;
+    font-weight: 600;
 }
 .head {
     font-size: x-large;
@@ -64,4 +67,43 @@
 .subhead {
     font-size: large;
     font-weight: bold;
+}
+
+
+/* Steps */
+.colorbox--steps {
+  background: rgb(var(--course-steps-bg-rgb));
+}
+
+.colorbox--steps > .colorbox__title {
+  background: rgb(var(--course-steps-title-bg-rgb));
+}
+
+/* Hints */
+.colorbox--hints {
+  background: rgb(var(--course-hints-bg-rgb));
+}
+
+.colorbox--hints > .colorbox__title {
+  background: rgb(var(--course-hints-title-bg-rgb));
+}
+
+:root {
+  /* Steps box */
+  --course-steps-bg-rgb: 232, 215, 26;
+  --course-steps-title-bg-rgb: 232, 137, 26;
+
+  /* Hints box */
+  --course-hints-bg-rgb: 26, 194, 232;
+  --course-hints-title-bg-rgb: 58, 146, 234;
+}
+
+:root.lia-variant-dark {
+  /* Steps box */
+  --course-steps-bg-rgb: 90, 82, 0;
+  --course-steps-title-bg-rgb: 122, 63, 0;
+
+  /* Hints box */
+  --course-hints-bg-rgb: 0, 75, 87;
+  --course-hints-title-bg-rgb: 13, 59, 122;
 }
