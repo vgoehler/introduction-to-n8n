@@ -109,8 +109,8 @@ Der Workflow soll:
 
 - Set, IF, Function Nodes nach Bedarf
 
-<div class="colorbox" style="background-color:#E0F2F1;">
-<div style="background-color:#0077B6;color:white;">
+<div class="colorbox colorbox--hints">
+<div class="colorbox__title">
 **Hinweise zur Umsetzung:**<!-- style="font-size:large;"-->
 
 </div>
@@ -172,8 +172,8 @@ Wir hatten einen Workflow, der:
 
 
 {{2}}
-<div class="colorbox" style="background-color:#F0F7FF;">
-<div style="background-color:#4A90E2;">
+<div class="colorbox colorbox--but">
+<div class="colorbox__title">
 **Aber:**
 </div>
 - Jeder Lauf war isoliert.
@@ -194,7 +194,7 @@ In echten Systemen gibt es:
 - Fehlerprotokolle
 
 {{1}}
-<!--style="background-color:#ECFDF5;"-->
+<!--class="lia-callout lia-callout--note"-->
 >
 > ➡️ Systeme brauchen **Gedächtnis**.
 
@@ -210,7 +210,7 @@ In echten Systemen gibt es:
 | Input/Output | Systemzustand |
 | Stateless | Stateful |
 
-<!--style="background-color:#ECFDF5;"-->
+<!--class="lia-callout lia-callout--note"-->
 >
 > *n8n kann beides: aber nur, wenn wir es entwerfen.*
 
@@ -224,8 +224,8 @@ Data Tables sind:
 - persistent gespeichert
 - zwischen Workflows teilbar
 
-<div class="colorbox" style="background-color:#F0F7FF;">
-<div style="background-color:#4A90E2;">
+<div class="colorbox colorbox--but">
+<div class="colorbox__title">
 *Sie funktionieren wie:*
 </div>
 
@@ -303,7 +303,7 @@ Der erste Workflow:
 
 Er ist:
 
-<!--style="background-color:#ECFDF5; width:50%;"-->
+<!--class="lia-callout lia-callout--note"-->
 > die Benutzeroberfläche unseres Systems.
 
 ---
@@ -334,7 +334,7 @@ Dieser Workflow:
 
 Er ist:
 
-<!--style="background-color:#ECFDF5; width:50%;"-->
+<!--class="lia-callout lia-callout--note"-->
 > der API-Layer unseres Systems.
 
 ---
@@ -369,8 +369,8 @@ Bevor wir zu weiteren Workflows kommen:
 - Bauen Sie den Formular-Workflow
 - Bauen Sie den Webhook-Workflow
 
-<div class="colorbox" style="background-color:#F0FDF4; width:50%; border:1px solid #059669;">
-<div style="background-color:#059669;">
+<div class="colorbox colorbox--batch" style="width:50%;">
+<div class="colorbox__title">
 **Spalten**
 </div>
 
@@ -382,8 +382,8 @@ Bevor wir zu weiteren Workflows kommen:
 - email
 </div>
 
-<div class="colorbox" style="background-color:#ECFDF5; width:50%; border:1px solid #10B981;">
-<div style="background-color:#10B981;">
+<div class="colorbox colorbox--errorwf" style="width:50%;">
+<div class="colorbox__title">
 **Nodes**
 </div>
 
@@ -411,7 +411,7 @@ Ein Scheduler:
 
 Das ist:
 
-<!--style="background-color:#ECFDF5; width:50%;"-->
+<!--class="lia-callout lia-callout--note"-->
 > - klassische Datenverarbeitung
 > - Logging, Reporting, Backups etc.
 
@@ -429,8 +429,8 @@ Falls das fehlschlägt:
 
 - Upload per FTP
 
-<div class="colorbox" style="background-color:#F0F7FF;">
-<div style="background-color:#4A90E2;">
+<div class="colorbox colorbox--but">
+<div class="colorbox__title">
 *Test FTP Server:*
 </div>
 - https://dlptest.com/ftp-test/
@@ -474,7 +474,7 @@ Dieser:
 
 **Fehler sind:**
 
-<!--style="background-color:#ECFDF5; width:50%; font-weight: bolder;"-->
+<!--class="lia-callout lia-callout--note"-->
 >
 > Teil des Systems, nicht das Ende davon.
 
@@ -488,8 +488,8 @@ Dieser:
 - Erstellen Sie einen täglichen Batch Job
 - Erstellen Sie einen Error Workflow
 
-<div class="colorbox" style="background-color:#F0FDF4; width:50%; border:1px solid #059669;">
-<div style="background-color:#059669;">
+<div class="colorbox colorbox--batch" style="width:50%;">
+<div class="colorbox__title">
 **Batch Job**
 </div>
 - soll alle Namen und Email aus der Data Table lesen
@@ -497,8 +497,8 @@ Dieser:
 - diese auf dem FTP Server ablegen
 </div>
 
-<div class="colorbox" style="background-color:#ECFDF5; width:50%; border:1px solid #10B981;">
-<div style="background-color:#10B981;">
+<div class="colorbox colorbox--errorwf" style="width:50%;">
+<div class="colorbox__title">
 **Error Workflow**
 </div>
 - soll Fehler des Batch Jobs loggen
@@ -522,7 +522,7 @@ Gleiche Logik nicht kopieren, sondern:
 
 auslagern als:
 
-<!--style="background-color:#ECFDF5; width:50%;"-->
+<!--class="lia-callout lia-callout--note"-->
 >
 > wiederverwendbare Subworkflows.
 
@@ -544,7 +544,7 @@ Jeder Subworkflow braucht:
 
 Erstellen eines Subworkflows:
 
-<!--style="background-color:#ECFDF5; width:50%;"-->
+<!--class="lia-callout lia-callout--note"-->
 > - mehrere Nodes mit STRG + Klick auswählen, dann Rechtsklick → Create Subworkflow
 > - Bei Änderung der Inputs des Subworkflows muss Published werden
 
