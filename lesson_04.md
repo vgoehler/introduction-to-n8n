@@ -4,7 +4,7 @@ author: Volker G. Göhler
 
 email:  volker.goehler@informatik.tu-freiberg.de
 
-version: 0.0.1
+version: 0.0.2
 
 language: de
 
@@ -464,9 +464,17 @@ Beispiel-Ausgabe:
 </div>
 </section>
 
+### Takeaways
+
+- REST APIs sind die Grundlage moderner verteilter Systeme
+- n8n eignet sich zur API-Orchestrierung
+- API-Dokumentationen sind essenziell
+
 ---
 
-## Zwischenfrage: Was braucht eine KI dafür?
+## REST APIs für KI nutzbar machen
+
+**Zwischenfrage: Was braucht eine KI dafür?**<!-- class="head" -->
 
 Ein LLM kann:
 
@@ -573,8 +581,6 @@ Diskussionsfragen:
 
 ### Takeaways
 
-- REST APIs sind die Grundlage moderner Systeme
-- n8n eignet sich zur API-Orchestrierung
 - KI braucht Werkzeuge, keine Magie
 - MCP verbindet KI mit realer Funktionalität
 
