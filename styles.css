@@ -57,3 +57,11 @@
     padding: 5px 0 0 5px;
     border-radius: inherit;
 }
+.head {
+    font-size: x-large;
+    font-weight: bold;
+}
+.subhead {
+    font-size: large;
+    font-weight: bold;
+}
