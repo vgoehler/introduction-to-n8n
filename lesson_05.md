@@ -269,12 +269,12 @@ basierend auf der vorherigen Aufgabe sollen Studierende:
 
 <div class="colorbox colorbox--steps">
 
-- einen Subworkflow bauen der
+- einen **Subworkflow** bauen der
 
    - eine Episoden-ID entgegennimmt
    - Charakternamen mit Status und Species dieser Episode zurückgibt
 
-- einen MCP-Workflow bauen, der
+- einen **MCP-Workflow** bauen, der
 
    - den Subworkflow als Tool nutzt
    - die Eingabe in der Trigger Node definieren
