@@ -59,6 +59,7 @@
     border-radius: 8px;
     margin-bottom: 0.6rem;
     font-weight: 600;
+    font-size: large;
 }
 .head {
     font-size: x-large;
@@ -132,48 +133,88 @@
   color: var(--color-text);
 }
 
+.arrow-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+/* Create the arrow using a Unicode character */
+.arrow-list li::before {
+  content: "➡️ "; 
+  display: inline-block;
+  width: 1.5em;
+  font-weight: bold;
+  flex-shrink: 0;
+  transform: translateY(0.15rem); 
+}
+.question {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+.question::before {
+  content: "❓"; 
+  display: inline-block;
+  width: 1.5em;
+  font-weight: bold;
+  flex-shrink: 0;
+  transform: translateY(0.15rem); 
+}
+
+.solution {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+.solution::before {
+  content: "💡"; 
+  display: inline-block;
+  width: 1.5em;
+  font-weight: bold;
+  flex-shrink: 0;
+  transform: translateY(0.15rem); 
+}
+
 :root {
-  /* Steps box */
-  --course-steps-bg-rgb: 232, 215, 26;
-  --course-steps-title-bg-rgb: 232, 137, 26;
+/* Steps box - Etwas heller für besseren Schwarz-Kontrast */
+  --course-steps-bg-rgb: 255, 243, 191;       /* Sanfteres Gelb */
+  --course-steps-title-bg-rgb: 232, 137, 26;   /* Bleibt markant */
 
   /* Hints box */
-  --course-hints-bg-rgb: 26, 194, 232;
+  --course-hints-bg-rgb: 207, 244, 252;      /* Hellblau */
   --course-hints-title-bg-rgb: 58, 146, 234;
 
-  /* but box */
-  --course-but-bg-rgb: 240, 247, 255;       /* #F0F7FF */
-  --course-but-title-bg-rgb: 74, 144, 226;  /* #4A90E2 */
+  /* But box */
+  --course-but-bg-rgb: 240, 247, 255;
+  --course-but-title-bg-rgb: 74, 144, 226;
 
-  /* callout box */
+  /* Callout / Error / Batch - Konsistente Mint-Töne */
   --course-note-bg-rgb: 236, 253, 245;
+  --course-errorwf-bg-rgb: 236, 253, 245;
+  --course-errorwf-accent-rgb: 16, 185, 129;
 
-  --course-errorwf-bg-rgb: 236, 253, 245;       /* #ECFDF5 */
-  --course-errorwf-accent-rgb: 16, 185, 129;    /* #10B981 */
-
-  --course-batch-bg-rgb: 240, 253, 244;      /* #F0FDF4 */
-  --course-batch-accent-rgb: 5, 150, 105;    /* #059669 */
+  --course-batch-bg-rgb: 220, 252, 231;      /* Leicht verstärktes Grün */
+  --course-batch-accent-rgb: 5, 150, 105;
 }
 
 :root.lia-variant-dark {
-  /* Steps box */
-  --course-steps-bg-rgb: 90, 82, 0;
-  --course-steps-title-bg-rgb: 122, 63, 0;
+  /* Steps box - Satteres Gold/Braun für Weiß-Kontrast */
+  --course-steps-bg-rgb: 85, 65, 0; 
+  --course-steps-title-bg-rgb: 153, 81, 0;
 
   /* Hints box */
-  --course-hints-bg-rgb: 0, 75, 87;
-  --course-hints-title-bg-rgb: 13, 59, 122;
+  --course-hints-bg-rgb: 8, 64, 84;
+  --course-hints-title-bg-rgb: 24, 78, 150;
 
-  /* but box */
-  --course-but-bg-rgb: 18, 28, 40;          /* dunkles „blue-ish“ Panel */
-  --course-but-title-bg-rgb: 35, 82, 150;   /* dunkleres Blau für Titel */
+  /* But box */
+  --course-but-bg-rgb: 25, 38, 55;
+  --course-but-title-bg-rgb: 45, 95, 170;
 
-  /* callout box */
-  --course-note-bg-rgb: 22, 38, 32;
+  /* Callout / Error / Batch */
+  --course-note-bg-rgb: 14, 45, 35;
+  --course-errorwf-bg-rgb: 14, 45, 35;
+  --course-errorwf-accent-rgb: 52, 211, 153; /* Hellerer Akzent für Dark Mode */
 
-  --course-errorwf-bg-rgb: 22, 38, 32;          /* dunkles mint */
-  --course-errorwf-accent-rgb: 16, 185, 129;    /* Akzent kann bleiben */
-
-  --course-batch-bg-rgb: 18, 34, 26;         /* dunkles grünliches Panel */
-  --course-batch-accent-rgb: 5, 150, 105;    /* Akzent kann bleiben */
+  --course-batch-bg-rgb: 12, 40, 28;
+  --course-batch-accent-rgb: 16, 185, 129;   /* Hellerer Akzent */
 }
