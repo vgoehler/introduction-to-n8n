@@ -170,7 +170,7 @@ Siehe [LICENSE](LICENSE) für weitere Details / See [LICENSE](LICENSE) for detai
 
 **Volker G. Göhler**
 - TU Bergakademie Freiberg
-- Email: volker.goehler@informatik.tu-freiberg.de
+- Email: [volker.goehler@informatik.tu-freiberg.de](mailto:volker.goehler@informatik.tu-freiberg.de)
 
 ## 🔗 Nützliche Links / Useful Links
 
