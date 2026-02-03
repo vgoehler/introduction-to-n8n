@@ -19,7 +19,7 @@ This module provides an introduction to **n8n**, an open-source workflow automat
 - [API-Nutzung und System mit N8N](lesson_03.md) - API-Integration
 - [REST API mit N8N](lesson_04.md) - RESTful Services
 - [MCP Tools an eine REST API anschließen](lesson_05.md) - Tool-Integration
-- [Blockaufgabe -- Päläo REST an eine KI anschließen](lesson_06.md) - Praxisaufgabe
+- [Blockaufgabe -- Paläo REST an eine KI anschließen](lesson_06.md) - Praxisaufgabe
 
 ## 🚀 n8n Installation
 
