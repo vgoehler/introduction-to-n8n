@@ -4,7 +4,7 @@ author: Volker G. Göhler
 
 email:  volker.goehler@informatik.tu-freiberg.de
 
-version: 0.0.1
+version: 0.0.3
 
 language: de
 
@@ -115,7 +115,7 @@ flowchart TB
 </div>
 </section>
 
-### Erledigte Aufgaben:
+### 1 + 2 Erledigte Aufgaben
 
 <div class="colorbox colorbox--light-blue" style="width:100%;">
 <div class="colorbox__title">
