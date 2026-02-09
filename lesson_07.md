@@ -28,7 +28,7 @@ title: N8N Workflows LLM + MCP + REST 07
 tags: Lehre, TUBAF
 
 -->
-[![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/vgoehler/introduction-to-n8n/refs/heads/main/lesson_06.md)
+[![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/vgoehler/introduction-to-n8n/refs/heads/main/lesson_07.md)
 
 # n8n Workflows: Blockaufgabe -- Von REST APIs zu MCP und LLM Integration ♊
 
