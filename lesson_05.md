@@ -99,7 +99,7 @@ https://ifiweb.informatik.tu-freiberg.de/public/lehre/vs/api.php?action=fetch-mo
 
 **Zwischenfrage: Was braucht eine KI dafür?**<!-- class="head" -->
 
-<div class="colorbox colorbox--steps">
+<div class="colorbox colorbox--orange">
 <div class="colorbox__title">
 Ein LLM kann:
 </div>
@@ -116,7 +116,7 @@ Aber:
 - LLMs sind wahrscheinlichkeitsbasierte Textgeneratoren
 - sie haben **keine** eingebauten Fähigkeiten, um Aktionen durchzuführen.
 
-<div class="colorbox colorbox--hints">
+<div class="colorbox colorbox--blue">
 <div class="colorbox__title">
 Ein LLM kann **nicht**:
 </div>
@@ -135,7 +135,7 @@ Ein LLM kann **nicht**:
 
 ### Was braucht ein LLM, um REST zu nutzen?
 
-<div class="colorbox colorbox--steps">
+<div class="colorbox colorbox--orange">
 <div class="colorbox__title">
 Notwendig sind:
 </div>
@@ -171,7 +171,7 @@ Es beschreibt:
 ### Verbindung: n8n ↔ MCP
 
 
-<div class="colorbox colorbox--but">
+<div class="colorbox colorbox--light-blue">
 <div class="colorbox__title">
 In unserem Setup:
 </div>
@@ -239,7 +239,7 @@ Wir wollen einen Workflow bauen, den eine KI (via MCP) selbstständig steuern ka
 
 ### Beispiel: MCP in n8n nutzen
 
-<div class="colorbox colorbox--but">
+<div class="colorbox colorbox--light-blue">
 <div class="colorbox__title">
 Beispiel MCP Workflow:
 </div>
@@ -267,7 +267,7 @@ Beispiel MCP Workflow:
 
 basierend auf der vorherigen Aufgabe sollen Studierende:
 
-<div class="colorbox colorbox--steps">
+<div class="colorbox colorbox--orange">
 
 - einen **Subworkflow** bauen der
 
@@ -283,7 +283,7 @@ basierend auf der vorherigen Aufgabe sollen Studierende:
 
 </div>
 
-<div class="colorbox colorbox--hints">
+<div class="colorbox colorbox--blue">
 <div class="colorbox__title">
 Bonus Tools:
 </div>
@@ -340,7 +340,7 @@ Diskussionsfragen:
 - starten Sie diese lokal oder auf einem Server (nutzen Sie z.B. `uvicorn`)
 - Lösungscode: [Übung 8 REST API](https://ificloud.xsitepool.tu-freiberg.de/index.php/s/ZtZo32PsDLdGioR)
 
-<div class="colorbox colorbox--but">
+<div class="colorbox colorbox--light-blue">
 <div class="colorbox__title">
 Nutzen Sie die API in einem n8n Workflow
 </div>
@@ -351,7 +351,7 @@ Nutzen Sie die API in einem n8n Workflow
 - Achtung: Die ID_NR ist eine positive Zahl, die nicht notwendigerweise kontinuierlich ist.
 </div>
 
-<div class="colorbox colorbox--hints">
+<div class="colorbox colorbox--blue">
 <div class="colorbox__title">
 Hinweise:
 </div>

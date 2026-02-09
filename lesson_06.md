@@ -56,7 +56,7 @@ Was haben wir letztes Mal gemacht?
 ## Blockaufgabe
 
 <section class="flex-container">
-<div class="colorbox colorbox--hints flex-child">
+<div class="colorbox colorbox--blue flex-child">
 <div class="colorbox__title">
 Schritte
 </div>
@@ -65,7 +65,7 @@ Schritte
 - MCP dafür nutzen
 - LLM Zugang für n8n
 </div>
-<div class="colorbox colorbox--but flex-child">
+<div class="colorbox colorbox--light-blue flex-child">
 <div class="colorbox__title">
 Flowchart
 </div>
@@ -120,7 +120,7 @@ flowchart TB
 
 In Übung 8 haben Sie eine REST API geschrieben.
 
-<div class="colorbox colorbox--hints" style="width:100%;">
+<div class="colorbox colorbox--blue" style="width:100%;">
 <div class="colorbox__title">
 Arbeitsanweisung
 </div>
@@ -154,7 +154,7 @@ if __name__ == "__main__":
 
 <section class="flex-container">
 
-<div class="colorbox colorbox--but flex-child">
+<div class="colorbox colorbox--light-blue flex-child">
 <div class="colorbox__title">
 🔌 Aufgabe: REST API im n8n-Workflow nutzen
 </div>
@@ -175,7 +175,7 @@ if __name__ == "__main__":
 </div>
 </section>
 
-<div class="colorbox colorbox--steps" style="width:100%;margin-top:1em;">
+<div class="colorbox colorbox--orange" style="width:100%;margin-top:1em;">
 <div class="colorbox__title">
 💡 Hinweise & Leitfragen
 </div>
@@ -202,7 +202,7 @@ if __name__ == "__main__":
 
 ### 3.1. LLM Integration in n8n
 
-<div class="colorbox colorbox--batch" style="width:100%;margin-top:1em;">
+<div class="colorbox colorbox--green" style="width:100%;margin-top:1em;">
 <div class="colorbox__title">
 Aufgabe: LLMs in n8n integrieren
 </div>
@@ -224,7 +224,7 @@ Aufgabe: LLMs in n8n integrieren
 
 Georg-August-Universität Göttingen: ([Chat-AI](https://www.uni-goettingen.de/de/686446.html))
 
-<div class="colorbox colorbox--hints" style="width:100%;">
+<div class="colorbox colorbox--blue" style="width:100%;">
 <div class="colorbox__title">
 Zugriff auf Chat-AI der Universität Göttingen
 </div>
@@ -271,7 +271,7 @@ print(response.output_text)
 - Eine Open-Source Plattform zum **lokalen Verwalten und Ausführen** von LLMs
 - Mittels eines CLI Tools werden Modelle lokal geladen und über eine REST-Schnittstelle bereitgestellt
 
-<div class="colorbox colorbox--hints" style="width:100%">
+<div class="colorbox colorbox--blue" style="width:100%">
 <div class="colorbox__title">
 🔧 **Grundlegende Schritte:**
 </div>
@@ -289,7 +289,7 @@ print(response.output_text)
 > ⚠️ **Docker-Hinweis:**  \
 Bei n8n im Docker-Container muss die **IP des Host-Rechners** verwendet werden.
 
-<div class="colorbox colorbox--steps" style="width:100%;margin-top:1em;">
+<div class="colorbox colorbox--orange" style="width:100%;margin-top:1em;">
 <div class="colorbox__title">
 🔍 Hinweise & Abwägungen
 </div>
@@ -334,7 +334,7 @@ print(result["response"])
 
 <section class="flex-container">
 
-<div class="colorbox colorbox--but flex-child" style="width:100%;">
+<div class="colorbox colorbox--light-blue flex-child" style="width:100%;">
 <div class="colorbox__title">
 🧩 Aufgabe: REST API als MCP-Tools in n8n integrieren
 </div>
@@ -345,7 +345,7 @@ print(result["response"])
 - **Mindestanforderung:** Implementieren Sie mindestens **ein Tool** (lesend), das direkt auf den REST-Endpoint zugreift.
 </div>
 
-<div class="colorbox colorbox--errorwf flex-child" style="width:100%;">
+<div class="colorbox colorbox--light-green flex-child" style="width:100%;">
 <div class="colorbox__title">
 🧭 Hinweise & Leitfragen (für Tool-Design)
 </div>
@@ -392,7 +392,7 @@ Das Format nutzt eigene Fehlercodes, Sie können aber auf HTTP Fehlercodes aufba
 
 <div class="flex-child">
 
-<div class="colorbox colorbox--hints" style="width:100%;">
+<div class="colorbox colorbox--blue" style="width:100%;">
 <div class="colorbox__title">
 🧭 Reflexion
 </div>
@@ -402,7 +402,7 @@ Das Format nutzt eigene Fehlercodes, Sie können aber auf HTTP Fehlercodes aufba
 - Wo sind klare **Grenzen** zwischen Logik, Daten und KI sinnvoll?
 </div>
 
-<div class="colorbox colorbox--but" style="width:100%;margin-top:1em;">
+<div class="colorbox colorbox--light-blue" style="width:100%;margin-top:1em;">
 <div class="colorbox__title">
 ✅ Fazit
 </div>

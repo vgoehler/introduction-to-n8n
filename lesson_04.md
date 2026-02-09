@@ -93,7 +93,7 @@ Bevor wir zu weiteren Workflows kommen:
 - Bauen Sie den Formular-Workflow
 - Bauen Sie den Webhook-Workflow
 
-<div class="colorbox colorbox--batch" style="width:50%;">
+<div class="colorbox colorbox--green" style="width:50%;">
 <div class="colorbox__title">
 **Spalten**
 </div>
@@ -106,7 +106,7 @@ Bevor wir zu weiteren Workflows kommen:
 - email
 </div>
 
-<div class="colorbox colorbox--errorwf" style="width:50%;">
+<div class="colorbox colorbox--light-green" style="width:50%;">
 <div class="colorbox__title">
 **Nodes**
 </div>
@@ -153,7 +153,7 @@ Falls das fehlschlägt:
 
 - Upload per FTP
 
-<div class="colorbox colorbox--but" >
+<div class="colorbox colorbox--light-blue" >
 <div class="colorbox__title">
 *Test FTP Server:*
 </div>
@@ -212,7 +212,7 @@ Dieser:
 - Erstellen Sie einen täglichen Batch Job
 - Erstellen Sie einen Error Workflow
 
-<div class="colorbox colorbox--batch" style="width:50%;">
+<div class="colorbox colorbox--green" style="width:50%;">
 <div class="colorbox__title">
 **Batch Job**
 </div>
@@ -221,7 +221,7 @@ Dieser:
 - diese auf dem FTP Server ablegen
 </div>
 
-<div class="colorbox colorbox--errorwf" style="width:50%;">
+<div class="colorbox colorbox--light-green" style="width:50%;">
 <div class="colorbox__title">
 **Error Workflow**
 </div>
@@ -358,7 +358,7 @@ Ziel:
 
 ### Rick and Morty API – Überblick
 
-<div class="colorbox colorbox--errorwf" style="width:50%;">
+<div class="colorbox colorbox--light-green" style="width:50%;">
 <div class="colorbox__title">
 Beispiel API:
 </div>

@@ -72,29 +72,39 @@
 
 
 /* Steps */
-.colorbox--steps {
+.colorbox--orange {
   background: rgb(var(--course-steps-bg-rgb));
 }
 
-.colorbox--steps > .colorbox__title {
+.colorbox--orange > .colorbox__title {
   background: rgb(var(--course-steps-title-bg-rgb));
 }
 
+
+/* Soft Steps / Secondary Orange */
+.colorbox--light-orange {
+  background: rgb(var(--course-steps-light-bg-rgb));
+}
+
+.colorbox--light-orange > .colorbox__title {
+  background: rgb(var(--course-steps-light-title-bg-rgb));
+}
+
 /* Hints */
-.colorbox--hints {
+.colorbox--blue {
   background: rgb(var(--course-hints-bg-rgb));
 }
 
-.colorbox--hints > .colorbox__title {
+.colorbox--blue > .colorbox__title {
   background: rgb(var(--course-hints-title-bg-rgb));
 }
 
 /* But */
-.colorbox--but {
+.colorbox--light-blue {
   background: rgb(var(--course-but-bg-rgb));
 }
 
-.colorbox--but > .colorbox__title {
+.colorbox--light-blue > .colorbox__title {
   background: rgb(var(--course-but-title-bg-rgb));
 }
 
@@ -112,23 +122,23 @@
 }
 
 /* Error Workflow Callout */
-.colorbox--errorwf {
+.colorbox--light-green {
   background: rgb(var(--course-errorwf-bg-rgb));
   border: 1px solid rgb(var(--course-errorwf-accent-rgb));
 }
 
-.colorbox--errorwf > .colorbox__title {
+.colorbox--light-green > .colorbox__title {
   background: rgb(var(--course-errorwf-accent-rgb));
   color: var(--color-text);
 }
 
 /* Batch Callout */
-.colorbox--batch {
+.colorbox--green {
   background: rgb(var(--course-batch-bg-rgb));
   border: 1px solid rgb(var(--course-batch-accent-rgb));
 }
 
-.colorbox--batch > .colorbox__title {
+.colorbox--green > .colorbox__title {
   background: rgb(var(--course-batch-accent-rgb));
   color: var(--color-text);
 }
@@ -180,6 +190,10 @@
   --course-steps-bg-rgb: 255, 243, 191;       /* Sanfteres Gelb */
   --course-steps-title-bg-rgb: 232, 137, 26;   /* Bleibt markant */
 
+  /* Light Orange (Secondary Steps) */
+  --course-steps-light-bg-rgb: 255, 248, 230;      /* Very soft peach */
+  --course-steps-light-title-bg-rgb: 245, 176, 65; /* Muted orange */
+
   /* Hints box */
   --course-hints-bg-rgb: 207, 244, 252;      /* Hellblau */
   --course-hints-title-bg-rgb: 58, 146, 234;
@@ -201,6 +215,10 @@
   /* Steps box - Satteres Gold/Braun für Weiß-Kontrast */
   --course-steps-bg-rgb: 85, 65, 0; 
   --course-steps-title-bg-rgb: 153, 81, 0;
+
+  /* Light Orange (Secondary Steps) - Dark Mode */
+  --course-steps-light-bg-rgb: 60, 50, 20;     /* Warm dark brown */
+  --course-steps-light-title-bg-rgb: 190, 130, 50;
 
   /* Hints box */
   --course-hints-bg-rgb: 8, 64, 84;

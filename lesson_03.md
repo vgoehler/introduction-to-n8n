@@ -109,7 +109,7 @@ Der Workflow soll:
 
 - Set, IF, Function Nodes nach Bedarf
 
-<div class="colorbox colorbox--hints">
+<div class="colorbox colorbox--blue">
 <div class="colorbox__title">
 **Hinweise zur Umsetzung:**<!-- style="font-size:large;"-->
 
@@ -172,7 +172,7 @@ Wir hatten einen Workflow, der:
 
 
 {{2}}
-<div class="colorbox colorbox--but">
+<div class="colorbox colorbox--light-blue">
 <div class="colorbox__title">
 **Aber:**
 </div>
@@ -224,7 +224,7 @@ Data Tables sind:
 - persistent gespeichert
 - zwischen Workflows teilbar
 
-<div class="colorbox colorbox--but">
+<div class="colorbox colorbox--light-blue">
 <div class="colorbox__title">
 *Sie funktionieren wie:*
 </div>
@@ -369,7 +369,7 @@ Bevor wir zu weiteren Workflows kommen:
 - Bauen Sie den Formular-Workflow
 - Bauen Sie den Webhook-Workflow
 
-<div class="colorbox colorbox--batch" style="width:50%;">
+<div class="colorbox colorbox--green" style="width:50%;">
 <div class="colorbox__title">
 **Spalten**
 </div>
@@ -382,7 +382,7 @@ Bevor wir zu weiteren Workflows kommen:
 - email
 </div>
 
-<div class="colorbox colorbox--errorwf" style="width:50%;">
+<div class="colorbox colorbox--light-green" style="width:50%;">
 <div class="colorbox__title">
 **Nodes**
 </div>
@@ -429,7 +429,7 @@ Falls das fehlschlägt:
 
 - Upload per FTP
 
-<div class="colorbox colorbox--but">
+<div class="colorbox colorbox--light-blue">
 <div class="colorbox__title">
 *Test FTP Server:*
 </div>
@@ -488,7 +488,7 @@ Dieser:
 - Erstellen Sie einen täglichen Batch Job
 - Erstellen Sie einen Error Workflow
 
-<div class="colorbox colorbox--batch" style="width:50%;">
+<div class="colorbox colorbox--green" style="width:50%;">
 <div class="colorbox__title">
 **Batch Job**
 </div>
@@ -497,7 +497,7 @@ Dieser:
 - diese auf dem FTP Server ablegen
 </div>
 
-<div class="colorbox colorbox--errorwf" style="width:50%;">
+<div class="colorbox colorbox--light-green" style="width:50%;">
 <div class="colorbox__title">
 **Error Workflow**
 </div>
